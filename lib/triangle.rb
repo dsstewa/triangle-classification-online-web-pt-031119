@@ -19,7 +19,9 @@ class Triangle
    end
  
  def triangle_test
-    
+    triangle_test = [(one + two > three), (one + three > two), (two + three > one)]
+     [one, two, three].each { |s| triangle_test << false if s <= 0 }
+       raise TriangleError if triangle_test.include?(false)
  end
  
  
@@ -30,16 +32,4 @@ class Triangle
 end
 
 
-# class Triangle
-#  
-# 
-#   def validate_triangle
-#     real_triangle = [(a + b > c), (a + c > b), (b + c > a)]
-#     [a, b, c].each { |s| real_triangle << false if s <= 0 }
-#     raise TriangleError if real_triangle.include?(false)
-#   end
 
-#   class TriangleError < StandardError
-#   end
-
-# end
