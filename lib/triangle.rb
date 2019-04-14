@@ -6,10 +6,16 @@ class Triangle
    @three = z
  end
   
-def kind
+  def kind
   
   
-end
-  
+   end
+ 
+ 
+ 
+ 
+ class TriangleError < StandardError
+    # triangle error code
+  end 
   
 end
